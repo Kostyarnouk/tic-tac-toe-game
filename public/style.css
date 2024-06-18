@@ -11,3 +11,26 @@ body{
     font-size: 1.5em;
     color: #a7c8dc;
 }
+
+.container{
+    position: absolute;
+    width: 600px;
+    height: 880px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.tools, .stats{
+    width: 600px;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+}
