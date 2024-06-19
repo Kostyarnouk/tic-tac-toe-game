@@ -5,11 +5,11 @@
 }
 
 body{
-    background-color: #1c6d85;
+    background-color: #1c8574;
     height: 100vh;
     font-family: "Karla", Helvetica, arial, sans-serif;
     font-size: 1.5em;
-    color: #a7c8dc;
+    color: #a7d9dc;
 }
 
 .container{
@@ -33,4 +33,29 @@ body{
     justify-content: space-evenly;
     align-items: center;
     border-radius: 20px;
+    background: linear-gradient(#12436e, #0f70ad);
+}
+
+.stats{
+    margin-top: 20px;
+}
+
+.cells{
+    display: flex;
+}
+
+.cell{
+    width: 200px;
+    height: 200px;
+    background-color: #0f70ad;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    color: #0f70ad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+
 }
