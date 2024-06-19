@@ -35,7 +35,11 @@ cells.forEach((cell, index) => {
             if (checkWinner(currentPlayer.played)) {
                 currentPlayer.score++;
                 updateScores();
-                showMessage(`${currentPlayer.symbol} is the winner`);
+                if (currentPlayer.score === 3) {
+                    showMessage(`${currentPlayer.symbol} wins the game!`);
+                } else {
+                    showMessage(`${currentPlayer.symbol} is the winner`);
+                }
             } else if (board.every(cell => cell !== null)) {
                 draws++;
                 updateScores();
@@ -47,10 +51,18 @@ cells.forEach((cell, index) => {
     });
 });
 
-resetButton.addEventListener('click', resetGame);
+resetButton.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    resetOverallGame();
+});
+
 closeMessage.addEventListener('click', () => {
     overlay.style.display = 'none';
-    resetGame();
+    if (playerA.score === 3 || playerB.score === 3) {
+        resetOverallGame();
+    } else {
+        resetGame();
+    }
 });
 
 function switchPlayer() {
@@ -89,3 +101,12 @@ function resetGame() {
     currentPlayer = playerA;
     currentTurn.innerHTML = currentPlayer.symbol;
 }
+
+function resetOverallGame() {
+    resetGame();
+    playerA.score = 0;
+    playerB.score = 0;
+    draws = 0;
+    updateScores();
+}
+

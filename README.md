@@ -6,8 +6,9 @@ This is a simple Tic Tac Toe game implemented using HTML, CSS, and JavaScript.
 - Playable Tic Tac Toe game with two players.
 - Tracks scores for Player A, Player B, and Draws.
 - Displays a message when a player wins or when the game is a draw.
+- First player to win 3 rounds is the overall winner.
 - Reset button to start a new game.
-- Favicon added for a polished look.
+- Favicon added for a presentable look.
 
 ## How to Play
 1. Open the `index.html` file in a web browser.
@@ -15,7 +16,9 @@ This is a simple Tic Tac Toe game implemented using HTML, CSS, and JavaScript.
 3. The game checks for a winner after each turn.
 4. If a player wins, a message is displayed, and the score is updated.
 5. If the game is a draw, a message is displayed, and the draw count is updated.
-6. Click the reset button to start a new game.
+6. The first player to win 3 rounds is declared the overall winner.
+7. Click the reset button to start a new game.
+8. If an overall winner is declared, the game can be reset to start a new series of rounds.
 
 ## Files
 - `index.html`: The main HTML file containing the game structure.
