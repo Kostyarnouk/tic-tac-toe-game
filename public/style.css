@@ -70,13 +70,16 @@ label{
 }
 
 .stats span{
-    color: #ff7700;
+    color: #ff0000;
 }
 
 .symbols i:nth-child(odd){
-    color: #ff7700;
+    color: #ffc400;
 }
 
+.symbols i:nth-child(even){
+    color: #ff00c8;
+}
 .reset{
     cursor: pointer;
 }
