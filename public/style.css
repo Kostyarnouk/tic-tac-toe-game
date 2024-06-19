@@ -23,7 +23,6 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
 }
 
 .tools, .stats{
@@ -52,10 +51,73 @@ body{
     border-radius: 20px;
     box-shadow: 0 5px 0 rgba(0, 0, 0, 0.7);
     cursor: pointer;
-    color: #0f70ad;
+    color: #7a9bb0;
+    display: flex;
+    align-items: center;
+    font-size: 5em;
+    justify-content: center;
+}
+
+.player, .draws{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    font-weight: 700;
+}
+
+.stats span{
+    color: #ff7700;
+}
+
+.symbols i:nth-child(odd){
+    color: #ff7700;
+}
+
+.reset{
+    cursor: pointer;
+}
+
+#overlay{
+    position: absolute;
+    width:100%;
+    height: 100vh;
+    background: hsl(0, 0%, 0%, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5em;
+    z-index: 1;
+    display: none;
+}
 
+#message{
+    position: absolute;
+    height: 30%;
+    min-height: 300px;
+    width: 60%;
+    background-color: #232323;
+    z-index: 2;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 10px 20px #000;
+}
+
+#close{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 0.7em;
+    padding: 2px;
+    
+}
+
+#message h2{
+    color: #ff7700;
 }
